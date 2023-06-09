@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Creative Coding - Practice 8 | Aria&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ConceptThis artwork is a visualization of an L-system, which is a mathematical system used to generate complex and self-similar patterns. The L-system in this code uses a set of rules to iteratively r">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creative Coding - Practice 8">
+<meta property="og:url" content="https://ariaranya.github.io/18.html">
+<meta property="og:site_name" content="Aria&#39;s Blog">
+<meta property="og:description" content="ConceptThis artwork is a visualization of an L-system, which is a mathematical system used to generate complex and self-similar patterns. The L-system in this code uses a set of rules to iteratively r">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-18T01:09:09.000Z">
+<meta property="article:modified_time" content="2023-06-09T18:22:50.077Z">
+<meta property="article:author" content="Aria">
+<meta property="article:tag" content="Practice -">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Aria's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Aria&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">my works for Creative Coding</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ariaranya.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-18" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/18.html" class="article-date">
+  <time class="dt-published" datetime="2023-05-18T01:09:09.000Z" itemprop="datePublished">2023-05-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Creative Coding - Practice 8
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h2><p>This artwork is a visualization of an L-system, which is a mathematical system used to generate complex and self-similar patterns. The L-system in this code uses a set of rules to iteratively replace symbols in a string, resulting in a sequence of instructions for drawing.</p>
+<p>I find it highly creative to simulate the growth of plants using an L-system. Implementing such a growth animation through code is particularly special and it’s something I aspire to master. The utilization of lerping, for example, demonstrates a unique approach.</p>
+<iframe width="600" height="642" src="https://editor.p5js.org/ariaranya/full/4xMhPsMdG"></iframe>
+
+
+
+
+<h2 id="Code-and-Comments"><a href="#Code-and-Comments" class="headerlink" title="Code and Comments"></a>Code and Comments</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Surrond items that we want to lerp with () in the rules</span></span><br><span class="line"><span class="comment">// () characters are then stripped from the next generation</span></span><br><span class="line"><span class="keyword">const</span> rules = &#123;</span><br><span class="line">  <span class="attr">X</span>: [</span><br><span class="line">    <span class="comment">// Original rule</span></span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;(F[+X][-X]FX)&quot;</span>,  <span class="attr">prob</span>: <span class="number">0.5</span>  &#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Fewer limbs</span></span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;(F[-X]FX)&quot;</span>,      <span class="attr">prob</span>: <span class="number">0.05</span> &#125;,</span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;(F[+X]FX)&quot;</span>,      <span class="attr">prob</span>: <span class="number">0.05</span> &#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Extra rotation</span></span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;(F[++X][-X]FX)&quot;</span>, <span class="attr">prob</span>: <span class="number">0.1</span>  &#125;,</span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;(F[+X][--X]FX)&quot;</span>, <span class="attr">prob</span>: <span class="number">0.1</span>  &#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Berries/fruits</span></span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;(F[+X][-X]FXA)&quot;</span>,  <span class="attr">prob</span>: <span class="number">0.1</span>  &#125;,</span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;(F[+X][-X]FXB)&quot;</span>,  <span class="attr">prob</span>: <span class="number">0.1</span>  &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">F</span>: [</span><br><span class="line">    <span class="comment">// Original rule</span></span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;F(F)&quot;</span>,  <span class="attr">prob</span>: <span class="number">0.85</span> &#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Extra growth</span></span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;F(FF)&quot;</span>, <span class="attr">prob</span>: <span class="number">0.05</span> &#125;,</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Stunted growth</span></span><br><span class="line">    &#123; <span class="attr">rule</span>: <span class="string">&quot;F&quot;</span>,   <span class="attr">prob</span>: <span class="number">0.1</span> &#125;,</span><br><span class="line">  ],</span><br><span class="line">  <span class="string">&quot;(&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  <span class="string">&quot;)&quot;</span>: <span class="string">&quot;&quot;</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> len = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">const</span> ang = <span class="number">25</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> drawRules;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> word = <span class="string">&quot;X&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> maxGeneration = <span class="number">6</span>;</span><br><span class="line"><span class="keyword">let</span> currGeneration = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> growthPercent = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">const</span> growthRate = <span class="number">0.04</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">createCanvas</span>(<span class="number">600</span>, <span class="number">600</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="title function_">strokeWeight</span>(<span class="number">2</span>);</span><br><span class="line">  </span><br><span class="line">  drawRules = &#123;</span><br><span class="line">    <span class="string">&quot;A&quot;</span>: <span class="function">(<span class="params">t</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Draw circle at current location</span></span><br><span class="line">      <span class="title function_">noStroke</span>();</span><br><span class="line">      <span class="title function_">fill</span>(<span class="string">&quot;#E5CEDC&quot;</span>);</span><br><span class="line">      <span class="title function_">circle</span>(<span class="number">0</span>, <span class="number">0</span>, len*<span class="number">2</span> * t);</span><br><span class="line">    &#125;,  </span><br><span class="line">    <span class="string">&quot;B&quot;</span>: <span class="function">(<span class="params">t</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Draw circle at current location</span></span><br><span class="line">      <span class="title function_">noStroke</span>();</span><br><span class="line">      <span class="title function_">fill</span>(<span class="string">&quot;#FCA17D&quot;</span>);</span><br><span class="line">      <span class="title function_">circle</span>(<span class="number">0</span>, <span class="number">0</span>, len*<span class="number">2</span> * t);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;F&quot;</span>: <span class="function">(<span class="params">t</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Draw line forward, then move to end of line</span></span><br><span class="line">      <span class="title function_">stroke</span>(<span class="string">&quot;#9ea93f&quot;</span>);</span><br><span class="line">      <span class="title function_">line</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, -len * t);</span><br><span class="line">      <span class="title function_">translate</span>(<span class="number">0</span>, -len * t);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;+&quot;</span>: <span class="function">(<span class="params">t</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Rotate right</span></span><br><span class="line">      <span class="title function_">rotate</span>(<span class="variable constant_">PI</span>/<span class="number">180</span> * -ang * t);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="string">&quot;-&quot;</span>: <span class="function">(<span class="params">t</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// Rotate right</span></span><br><span class="line">      <span class="title function_">rotate</span>(<span class="variable constant_">PI</span>/<span class="number">180</span> * ang * t);</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">// Save current location</span></span><br><span class="line">    <span class="string">&quot;[&quot;</span>: push,</span><br><span class="line">    <span class="comment">// Restore last location</span></span><br><span class="line">    <span class="string">&quot;]&quot;</span>: pop,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">draw</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">background</span>(<span class="number">28</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(growthPercent &lt; <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> mod = (currGeneration + growthPercent);</span><br><span class="line">    growthPercent += growthRate/mod;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="title function_">nextGeneration</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="title function_">drawLsysLerp</span>(width/<span class="number">2</span>, height, word, growthPercent);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">mouseReleased</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">nextGeneration</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">nextGeneration</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span>(growthPercent &lt; <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">if</span>(currGeneration === maxGeneration) &#123;</span><br><span class="line">    currGeneration = <span class="number">0</span>;</span><br><span class="line">    word = <span class="string">&quot;X&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  word = <span class="title function_">generate</span>(word);</span><br><span class="line">  </span><br><span class="line">  currGeneration ++;</span><br><span class="line">  growthPercent = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">generate</span>(<span class="params">word</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> next = <span class="string">&quot;&quot;</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; word.<span class="property">length</span>; i ++) &#123;</span><br><span class="line">    <span class="keyword">let</span> c = word[i];</span><br><span class="line">    <span class="keyword">if</span>(c <span class="keyword">in</span> rules) &#123;</span><br><span class="line">      <span class="keyword">let</span> rule = rules[c];</span><br><span class="line">      </span><br><span class="line">      <span class="comment">// Check if we&#x27;re using an array or not</span></span><br><span class="line">      <span class="keyword">if</span>(<span class="title class_">Array</span>.<span class="title function_">isArray</span>(rule)) &#123;</span><br><span class="line">        next += <span class="title function_">chooseOne</span>(rule); <span class="comment">// If we are, choose one of the options</span></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        next += rules[c]; <span class="comment">// Otherwise use the rule directly</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      next += c;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> next;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">chooseOne</span>(<span class="params">ruleSet</span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> n = <span class="title function_">random</span>(); <span class="comment">// Random number between 0-1</span></span><br><span class="line">  <span class="keyword">let</span> t = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; ruleSet.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    t += ruleSet[i].<span class="property">prob</span>; <span class="comment">// Keep adding the probability of the options to total</span></span><br><span class="line">    <span class="keyword">if</span>(t &gt; n) &#123; <span class="comment">// If the total is more than the random value</span></span><br><span class="line">      <span class="keyword">return</span> ruleSet[i].<span class="property">rule</span>; <span class="comment">// Choose that option</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">drawLsysLerp</span>(<span class="params">x, y, state, t</span>) &#123;</span><br><span class="line">  t = <span class="title function_">constrain</span>(t, <span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">let</span> lerpOn = <span class="literal">false</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="title function_">push</span>();</span><br><span class="line">  <span class="title function_">translate</span>(x, y);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; state.<span class="property">length</span>; i ++) &#123;</span><br><span class="line">    <span class="keyword">let</span> c = state[i];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(c === <span class="string">&quot;(&quot;</span>) &#123;</span><br><span class="line">      lerpOn = <span class="literal">true</span>;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(c === <span class="string">&quot;)&quot;</span>) &#123;</span><br><span class="line">      lerpOn = <span class="literal">false</span>;</span><br><span class="line">      <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">let</span> lerpT = t;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(!lerpOn) &#123;</span><br><span class="line">      lerpT = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(c <span class="keyword">in</span> drawRules) &#123;</span><br><span class="line">      drawRules[c](lerpT);</span><br><span class="line">    &#125;  </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="title function_">pop</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Reference-Links"><a href="#Reference-Links" class="headerlink" title="Reference Links"></a>Reference Links</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=TOPxa1xIG5Q">Growing Procedural Plants in P5js (L System Linear Interpolation) </a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ariaranya.github.io/18.html" data-id="cliowbhxd000jnbov97sz8r98" data-title="Creative Coding - Practice 8" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Practice/" rel="tag">Practice -</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/18%20copy.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Creative Coding - Practice 7
+        
+      </div>
+    </a>
+  
+  
+    <a href="/17.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Creative Coding - Practice 6</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT2/" rel="tag">AT2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT3/" rel="tag">AT3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assignments-1-p5-Sketch-Banner-Design/" rel="tag">Assignments 1 p5 Sketch - Banner Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice/" rel="tag">Practice -</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bouncing-balls/" rel="tag">Practice - Bouncing balls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bubble-2/" rel="tag">Practice - Bubble 2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Dots-pattern-with-background-colour-changes/" rel="tag">Practice - Dots pattern with background colour changes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Print-Pattern/" rel="tag">Practice - Print Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-bubbles/" rel="tag">Practice - bubbles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-flow-filed/" rel="tag">Practice - flow filed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-rainning-day/" rel="tag">Practice - rainning day</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AT2/" style="font-size: 10px;">AT2</a> <a href="/tags/AT3/" style="font-size: 10px;">AT3</a> <a href="/tags/Assignments-1-p5-Sketch-Banner-Design/" style="font-size: 10px;">Assignments 1 p5 Sketch - Banner Design</a> <a href="/tags/Practice/" style="font-size: 10px;">Practice -</a> <a href="/tags/Practice-Bouncing-balls/" style="font-size: 10px;">Practice - Bouncing balls</a> <a href="/tags/Practice-Bubble-2/" style="font-size: 10px;">Practice - Bubble 2</a> <a href="/tags/Practice-Dots-pattern-with-background-colour-changes/" style="font-size: 10px;">Practice - Dots pattern with background colour changes</a> <a href="/tags/Practice-Print-Pattern/" style="font-size: 10px;">Practice - Print Pattern</a> <a href="/tags/Practice-bubbles/" style="font-size: 10px;">Practice - bubbles</a> <a href="/tags/Practice-flow-filed/" style="font-size: 10px;">Practice - flow filed</a> <a href="/tags/Practice-rainning-day/" style="font-size: 10px;">Practice - rainning day</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/05.html">Creative Coding - AT3</a>
+          </li>
+        
+          <li>
+            <a href="/19.html">Creative Coding - AT2 April&#39;s loop</a>
+          </li>
+        
+          <li>
+            <a href="/18%20copy.html">Creative Coding - Practice 7</a>
+          </li>
+        
+          <li>
+            <a href="/18.html">Creative Coding - Practice 8</a>
+          </li>
+        
+          <li>
+            <a href="/17.html">Creative Coding - Practice 6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Aria<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

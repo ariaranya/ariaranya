@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Creative Coding - Practice 4 | Aria&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Concept This exercise is for learning and conceptual understanding of Perlin Noise Flow Field. I feel that Flow Field has a futuristic sci-fi vibe and it can be seen in many digital artworks where art">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creative Coding - Practice 4">
+<meta property="og:url" content="https://ariaranya.github.io/15.html">
+<meta property="og:site_name" content="Aria&#39;s Blog">
+<meta property="og:description" content="Concept This exercise is for learning and conceptual understanding of Perlin Noise Flow Field. I feel that Flow Field has a futuristic sci-fi vibe and it can be seen in many digital artworks where art">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-15T01:09:09.000Z">
+<meta property="article:modified_time" content="2023-06-09T18:22:50.077Z">
+<meta property="article:author" content="Aria">
+<meta property="article:tag" content="Practice - flow filed">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Aria's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Aria&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">my works for Creative Coding</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ariaranya.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-15" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/15.html" class="article-date">
+  <time class="dt-published" datetime="2023-05-15T01:09:09.000Z" itemprop="datePublished">2023-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Creative Coding - Practice 4
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h2><p> This exercise is for learning and conceptual understanding of Perlin Noise Flow Field. I feel that Flow Field has a futuristic sci-fi vibe and it can be seen in many digital artworks where artists employ Perlin Noise and Flow Field. Therefore, I hope to be able to incorporate it into my future works through this exercise. </p>
+<iframe width="800" height = "800" src="https://editor.p5js.org/ariaranya/full/V-isI7D5R"></iframe>
+
+
+
+
+<h2 id="Code-and-Comments"><a href="#Code-and-Comments" class="headerlink" title="Code and Comments"></a>Code and Comments</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Variable Declarations</span></span><br><span class="line"><span class="keyword">var</span> points = [];  <span class="comment">// an array that will store the positions of the particles.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mult;  <span class="comment">// mult is used to control the movement of the particles based on noise.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> r1, r2, g1, g2, b1, b2;  <span class="comment">// define the color range for the particles.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// loops, after setup has run</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">  </span><br><span class="line">  <span class="title function_">createCanvas</span>(<span class="number">600</span>, <span class="number">600</span>); <span class="comment">// create a canvas with 600px wide and 600px tall</span></span><br><span class="line">  </span><br><span class="line">  <span class="title function_">background</span>(<span class="number">255</span>); <span class="comment">// fill background color in white</span></span><br><span class="line">  </span><br><span class="line">  <span class="title function_">angleMode</span>(<span class="variable constant_">DEGREES</span>);  <span class="comment">//  sets the angle mode to degrees</span></span><br><span class="line">  </span><br><span class="line">  <span class="title function_">noiseDetail</span>(<span class="number">1</span>);  <span class="comment">// sets the level of detail for the Perlin noise function</span></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> density = <span class="number">20</span>;  <span class="comment">// set density equal 20</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">var</span> space = width / density;  <span class="comment">//  space will be 600 / 20 = 30</span></span><br><span class="line"></span><br><span class="line">  </span><br><span class="line">  <span class="comment">// For loops generate the initial positions of the particles based on a grid </span></span><br><span class="line">  <span class="comment">// Each particle is slightly offset</span></span><br><span class="line">  <span class="comment">//The outer for loop iterates over the x-coordinates in the grid.</span></span><br><span class="line">  <span class="comment">//The inner for loop iterates over the y-coordinates in the grid.</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> x = <span class="number">0</span>; x &lt; width; x += space) &#123;  <span class="comment">// variable x equal to 0</span></span><br><span class="line">                                            <span class="comment">// as x less than the width of canvas</span></span><br><span class="line">                                            <span class="comment">// x equal to x plus space</span></span><br><span class="line">    </span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> y = <span class="number">0</span>; y &lt; height; y += space) &#123;  <span class="comment">// variable y equal to 0</span></span><br><span class="line">                                                 <span class="comment">// as y less than the height of   canvas</span></span><br><span class="line">                                                 <span class="comment">// y equal to y plus space</span></span><br><span class="line">         </span><br><span class="line">      <span class="comment">// create a new particle position vector  </span></span><br><span class="line">      <span class="comment">//The x-coordinate of the particle is  x + random(-10, 10).</span></span><br><span class="line">      <span class="comment">//The y-coordinate of the particle is  y + random(-10, 10)  </span></span><br><span class="line">      <span class="keyword">var</span> p = <span class="title function_">createVector</span>(x + <span class="title function_">random</span>(-<span class="number">10</span>, <span class="number">10</span>), y + <span class="title function_">random</span>(-<span class="number">10</span>, <span class="number">10</span>));</span><br><span class="line">      </span><br><span class="line">        </span><br><span class="line">      points.<span class="title function_">push</span>(p);  <span class="comment">//  &quot;p&quot; is added to the points array    </span></span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="comment">// assigned random values to define the color ranges for the particles</span></span><br><span class="line">  r1 = <span class="title function_">random</span>(<span class="number">255</span>);</span><br><span class="line">  r2 = <span class="title function_">random</span>(<span class="number">255</span>);</span><br><span class="line">  g1 = <span class="title function_">random</span>(<span class="number">255</span>);</span><br><span class="line">  g2 = <span class="title function_">random</span>(<span class="number">255</span>);</span><br><span class="line">  b1 = <span class="title function_">random</span>(<span class="number">255</span>);</span><br><span class="line">  b2 = <span class="title function_">random</span>(<span class="number">255</span>);</span><br><span class="line"></span><br><span class="line">  mult = <span class="title function_">random</span>(<span class="number">0.002</span>, <span class="number">0.01</span>); <span class="comment">// assigned a random value between 0.002 and 0.01</span></span><br><span class="line"></span><br><span class="line">  &#125; </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// loops, after setup has run</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">draw</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">noStroke</span>();  <span class="comment">// no stroke, only have fill colors</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// The for loop iterates over each particle in the points array</span></span><br><span class="line">  <span class="comment">// function is used to map the values of points[i].x and points[i].y</span></span><br><span class="line">  <span class="comment">// to the color ranges defined by r1, r2, g1, g2, b1, and b2</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; points.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    <span class="keyword">var</span> r = <span class="title function_">map</span>(points[i].<span class="property">x</span>, <span class="number">0</span>, width, r1, r2);</span><br><span class="line">    <span class="keyword">var</span> g = <span class="title function_">map</span>(points[i].<span class="property">y</span>, <span class="number">0</span>, height, g1, g2);</span><br><span class="line">    <span class="keyword">var</span> b = <span class="title function_">map</span>(points[i].<span class="property">x</span>, <span class="number">0</span>, width, b1, b2);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// variavle alpha to create a fade effect</span></span><br><span class="line">    <span class="comment">// The dist() function calculates the distance between the center of the canvas  and each point.</span></span><br><span class="line">    <span class="comment">//The map() function is used to convert this distance to a new range of values.</span></span><br><span class="line">    <span class="comment">// The original range is from 0 to 350</span></span><br><span class="line">    <span class="comment">// The new range is from 400 to 0</span></span><br><span class="line">    <span class="keyword">var</span> alpha = <span class="title function_">map</span>(<span class="title function_">dist</span>(width / <span class="number">2</span>, height / <span class="number">2</span>, points[i].<span class="property">x</span>, points[i].<span class="property">y</span>), <span class="number">0</span>, <span class="number">350</span>, <span class="number">400</span>, <span class="number">0</span>);  </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">//  fill colors based on the caculated value of r, g, b, alpha</span></span><br><span class="line">    <span class="title function_">fill</span>(r, g, b, alpha);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="comment">// function converts this noise value from the range 0 to 1 </span></span><br><span class="line">    <span class="comment">// to an angle in degrees, ranging from 0 to 720.</span></span><br><span class="line">    <span class="keyword">var</span> angle = <span class="title function_">map</span>(<span class="title function_">noise</span>(points[i].<span class="property">x</span> * mult, points[i].<span class="property">y</span> * mult), <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">720</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Updates the position of the current point </span></span><br><span class="line">    points[i].<span class="title function_">add</span>(<span class="title function_">createVector</span>(<span class="title function_">cos</span>(angle), <span class="title function_">sin</span>(angle)));</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// if distance less than 350 draw a small ellipse</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="title function_">dist</span>(width / <span class="number">2</span>, height / <span class="number">2</span>, points[i].<span class="property">x</span>, points[i].<span class="property">y</span>) &lt; <span class="number">350</span>) &#123;</span><br><span class="line">      <span class="title function_">ellipse</span>(points[i].<span class="property">x</span>, points[i].<span class="property">y</span>, <span class="number">1</span>);  <span class="comment">// x coordinate = point[i].x</span></span><br><span class="line">                                             <span class="comment">// y coordinate = point[i].y</span></span><br><span class="line">                                             <span class="comment">// the width &amp; height of ellipse = 1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Reference-Links"><a href="#Reference-Links" class="headerlink" title="Reference Links"></a>Reference Links</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=1-QXuR-XX_s">Colorful Coding</a><br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=BjoM9oKOAKY">The Coding Train</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ariaranya.github.io/15.html" data-id="cliowbhx60008nbov7uabgkc6" data-title="Creative Coding - Practice 4" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Practice-flow-filed/" rel="tag">Practice - flow filed</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/16.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Creative Coding - Practice 5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/30%20copy.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Assignments 1 p5 Sketch - Banner Design</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT2/" rel="tag">AT2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT3/" rel="tag">AT3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assignments-1-p5-Sketch-Banner-Design/" rel="tag">Assignments 1 p5 Sketch - Banner Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice/" rel="tag">Practice -</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bouncing-balls/" rel="tag">Practice - Bouncing balls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bubble-2/" rel="tag">Practice - Bubble 2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Dots-pattern-with-background-colour-changes/" rel="tag">Practice - Dots pattern with background colour changes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Print-Pattern/" rel="tag">Practice - Print Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-bubbles/" rel="tag">Practice - bubbles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-flow-filed/" rel="tag">Practice - flow filed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-rainning-day/" rel="tag">Practice - rainning day</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AT2/" style="font-size: 10px;">AT2</a> <a href="/tags/AT3/" style="font-size: 10px;">AT3</a> <a href="/tags/Assignments-1-p5-Sketch-Banner-Design/" style="font-size: 10px;">Assignments 1 p5 Sketch - Banner Design</a> <a href="/tags/Practice/" style="font-size: 10px;">Practice -</a> <a href="/tags/Practice-Bouncing-balls/" style="font-size: 10px;">Practice - Bouncing balls</a> <a href="/tags/Practice-Bubble-2/" style="font-size: 10px;">Practice - Bubble 2</a> <a href="/tags/Practice-Dots-pattern-with-background-colour-changes/" style="font-size: 10px;">Practice - Dots pattern with background colour changes</a> <a href="/tags/Practice-Print-Pattern/" style="font-size: 10px;">Practice - Print Pattern</a> <a href="/tags/Practice-bubbles/" style="font-size: 10px;">Practice - bubbles</a> <a href="/tags/Practice-flow-filed/" style="font-size: 10px;">Practice - flow filed</a> <a href="/tags/Practice-rainning-day/" style="font-size: 10px;">Practice - rainning day</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/05.html">Creative Coding - AT3</a>
+          </li>
+        
+          <li>
+            <a href="/19.html">Creative Coding - AT2 April&#39;s loop</a>
+          </li>
+        
+          <li>
+            <a href="/18%20copy.html">Creative Coding - Practice 7</a>
+          </li>
+        
+          <li>
+            <a href="/18.html">Creative Coding - Practice 8</a>
+          </li>
+        
+          <li>
+            <a href="/17.html">Creative Coding - Practice 6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Aria<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

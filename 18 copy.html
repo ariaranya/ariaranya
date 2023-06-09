@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Creative Coding - Practice 7 | Aria&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ConceptThis exercise is a derivative of the previous bubble exercise. Building upon its existing functionality, I added sliders that allow adjusting the size of the circles and the stroke weight. Addi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creative Coding - Practice 7">
+<meta property="og:url" content="https://ariaranya.github.io/18%20copy.html">
+<meta property="og:site_name" content="Aria&#39;s Blog">
+<meta property="og:description" content="ConceptThis exercise is a derivative of the previous bubble exercise. Building upon its existing functionality, I added sliders that allow adjusting the size of the circles and the stroke weight. Addi">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-18T01:09:09.000Z">
+<meta property="article:modified_time" content="2023-06-09T18:22:50.077Z">
+<meta property="article:author" content="Aria">
+<meta property="article:tag" content="Practice - Bubble 2">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Aria's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Aria&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">my works for Creative Coding</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ariaranya.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-18 copy" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/18%20copy.html" class="article-date">
+  <time class="dt-published" datetime="2023-05-18T01:09:09.000Z" itemprop="datePublished">2023-05-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Creative Coding - Practice 7
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h2><p>This exercise is a derivative of the previous bubble exercise. Building upon its existing functionality, I added sliders that allow adjusting the size of the circles and the stroke weight. Additionally, I introduced a delay in the bubble generation, making the process appear more natural and dynamic. This enhancement adds more interactivity compared to before, making it more engaging and enjoyable.</p>
+<p>By refining and modifying previous exercises, my aim is to gain a better understanding of coding logic and enhance my ability to independently program. It serves as a means to further explore the intricacies of coding while simultaneously honing my programming skills.</p>
+<iframe width="600" height="642" src="https://editor.p5js.org/ariaranya/full/HneSlzvYZ"></iframe>
+
+
+
+
+<h2 id="Code-and-Comments"><a href="#Code-and-Comments" class="headerlink" title="Code and Comments"></a>Code and Comments</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> slider1, slider2;</span><br><span class="line"><span class="keyword">let</span> cirs = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">// loops, after setup has run</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">createCanvas</span>(<span class="number">600</span>, <span class="number">600</span>); <span class="comment">// Creates a canvas with a size of 600x600 pixels</span></span><br><span class="line">  <span class="title function_">colorMode</span>(<span class="variable constant_">HSB</span>, <span class="number">360</span>, <span class="number">100</span>, <span class="number">100</span>); <span class="comment">// Sets the color mode to HSB</span></span><br><span class="line"></span><br><span class="line">  slider1 = <span class="title function_">createSlider</span>(<span class="number">1</span>, <span class="number">100</span>, <span class="number">10</span>); <span class="comment">// Creates a slider for circle size, range: 1 to 100, initial value: 10</span></span><br><span class="line">  slider1.<span class="title function_">position</span>(<span class="number">10</span>, height - <span class="number">60</span>); <span class="comment">// Positions the slider on the canvas</span></span><br><span class="line">  slider1.<span class="title function_">style</span>(<span class="string">&quot;width&quot;</span>, <span class="string">&quot;120px&quot;</span>); <span class="comment">// Sets the width of the slider</span></span><br><span class="line"></span><br><span class="line">  slider2 = <span class="title function_">createSlider</span>(<span class="number">1</span>, <span class="number">20</span>, <span class="number">1</span>); <span class="comment">// Creates a slider for stroke weight, range: 1 to 20, initial value: 1</span></span><br><span class="line">  slider2.<span class="title function_">position</span>(<span class="number">10</span>, height - <span class="number">40</span>); <span class="comment">// Positions the slider on the canvas</span></span><br><span class="line">  slider2.<span class="title function_">style</span>(<span class="string">&quot;width&quot;</span>, <span class="string">&quot;120px&quot;</span>); <span class="comment">// Sets the width of the slider</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// loops, after setup has run</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">draw</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title function_">background</span>(<span class="number">220</span>); <span class="comment">// Clears the background to light gray (220)</span></span><br><span class="line">  <span class="title function_">textSize</span>(<span class="number">15</span>);</span><br><span class="line">  <span class="title function_">textAlign</span>(<span class="variable constant_">LEFT</span>, <span class="variable constant_">CENTER</span>);</span><br><span class="line">  <span class="title function_">fill</span>(<span class="number">0</span>);</span><br><span class="line">  <span class="title function_">noStroke</span>();</span><br><span class="line">  <span class="title function_">text</span>(<span class="string">&quot;circle size&quot;</span>, <span class="number">140</span>, height - <span class="number">60</span> + <span class="number">10</span>); <span class="comment">// Displays label for circle size slider</span></span><br><span class="line">  <span class="title function_">text</span>(<span class="string">&quot;stroke weight&quot;</span>, <span class="number">140</span>, height - <span class="number">40</span> + <span class="number">10</span>); <span class="comment">// Displays label for stroke weight slider</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; cirs.<span class="property">length</span>; i++) &#123;</span><br><span class="line">    cirs[i].<span class="title function_">display</span>(); <span class="comment">// Displays each circle in the cirs array by calling their display() method</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">keyPressed</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (key == <span class="string">&quot; &quot;</span>) &#123;</span><br><span class="line">    cirs = []; <span class="comment">// If the spacebar is pressed, the cirs array is emptied (all circles are removed)</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">mousePressed</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> createNum = <span class="title function_">int</span>(<span class="title function_">random</span>(<span class="number">5</span>, <span class="number">10</span>)); <span class="comment">// Generates a random number between 5 and 10</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; createNum; i++) &#123;</span><br><span class="line">    <span class="keyword">let</span> cx, cy, cs;</span><br><span class="line">    cx = mouseX + <span class="title function_">random</span>(-<span class="number">50</span>, <span class="number">50</span>); <span class="comment">// Randomizes the x position of the circle around the mouse position</span></span><br><span class="line">    cy = mouseY + <span class="title function_">random</span>(-<span class="number">50</span>, <span class="number">50</span>); <span class="comment">// Randomizes the y position of the circle around the mouse position</span></span><br><span class="line">    cs = <span class="title function_">random</span>(<span class="number">1</span>, slider1.<span class="title function_">value</span>()); <span class="comment">// Randomizes the size of the circle between 1 and the value of slider1</span></span><br><span class="line">    cirs.<span class="title function_">push</span>(<span class="keyword">new</span> <span class="title class_">Circle</span>(cx, cy, cs)); <span class="comment">// Creates a new Circle object with the randomized values and adds it to the cirs array</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Circle</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">x, y, s</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">x</span> = x; <span class="comment">// Stores the x position of the circle</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">y</span> = y; <span class="comment">// Stores the y position of the circle</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">size</span> = s; <span class="comment">// Stores the size of the circle</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">col</span> = <span class="title function_">color</span>(<span class="title function_">random</span>(<span class="number">200</span>, <span class="number">230</span>), <span class="title function_">random</span>(<span class="number">20</span>, <span class="number">100</span>), <span class="number">100</span>); <span class="comment">// Generates a random color for the circle using the HSB color mode</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">wei</span> = slider2.<span class="title function_">value</span>(); <span class="comment">// Sets the stroke weight of the circle to the value of slider2</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">display</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="title function_">noFill</span>(); <span class="comment">// Sets the fill of the circle to none</span></span><br><span class="line">    <span class="title function_">stroke</span>(<span class="variable language_">this</span>.<span class="property">col</span>); <span class="comment">// Sets the stroke color of the circle using the generated color</span></span><br><span class="line">    <span class="title function_">strokeWeight</span>(<span class="variable language_">this</span>.<span class="property">wei</span>); <span class="comment">// Sets the stroke weight of the circle</span></span><br><span class="line">    <span class="title function_">ellipse</span>(<span class="variable language_">this</span>.<span class="property">x</span>, <span class="variable language_">this</span>.<span class="property">y</span>, <span class="variable language_">this</span>.<span class="property">size</span>, <span class="variable language_">this</span>.<span class="property">size</span>); <span class="comment">// Draws the circle on the canvas using the ellipse() function</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Reference-Links"><a href="#Reference-Links" class="headerlink" title="Reference Links"></a>Reference Links</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=TaN5At5RWH8">The Coding Train</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ariaranya.github.io/18%20copy.html" data-id="cliowbhxb000gnbov7nebhtac" data-title="Creative Coding - Practice 7" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Practice-Bubble-2/" rel="tag">Practice - Bubble 2</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/19.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Creative Coding - AT2 April&#39;s loop
+        
+      </div>
+    </a>
+  
+  
+    <a href="/18.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Creative Coding - Practice 8</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT2/" rel="tag">AT2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT3/" rel="tag">AT3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assignments-1-p5-Sketch-Banner-Design/" rel="tag">Assignments 1 p5 Sketch - Banner Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice/" rel="tag">Practice -</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bouncing-balls/" rel="tag">Practice - Bouncing balls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bubble-2/" rel="tag">Practice - Bubble 2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Dots-pattern-with-background-colour-changes/" rel="tag">Practice - Dots pattern with background colour changes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Print-Pattern/" rel="tag">Practice - Print Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-bubbles/" rel="tag">Practice - bubbles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-flow-filed/" rel="tag">Practice - flow filed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-rainning-day/" rel="tag">Practice - rainning day</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AT2/" style="font-size: 10px;">AT2</a> <a href="/tags/AT3/" style="font-size: 10px;">AT3</a> <a href="/tags/Assignments-1-p5-Sketch-Banner-Design/" style="font-size: 10px;">Assignments 1 p5 Sketch - Banner Design</a> <a href="/tags/Practice/" style="font-size: 10px;">Practice -</a> <a href="/tags/Practice-Bouncing-balls/" style="font-size: 10px;">Practice - Bouncing balls</a> <a href="/tags/Practice-Bubble-2/" style="font-size: 10px;">Practice - Bubble 2</a> <a href="/tags/Practice-Dots-pattern-with-background-colour-changes/" style="font-size: 10px;">Practice - Dots pattern with background colour changes</a> <a href="/tags/Practice-Print-Pattern/" style="font-size: 10px;">Practice - Print Pattern</a> <a href="/tags/Practice-bubbles/" style="font-size: 10px;">Practice - bubbles</a> <a href="/tags/Practice-flow-filed/" style="font-size: 10px;">Practice - flow filed</a> <a href="/tags/Practice-rainning-day/" style="font-size: 10px;">Practice - rainning day</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/05.html">Creative Coding - AT3</a>
+          </li>
+        
+          <li>
+            <a href="/19.html">Creative Coding - AT2 April&#39;s loop</a>
+          </li>
+        
+          <li>
+            <a href="/18%20copy.html">Creative Coding - Practice 7</a>
+          </li>
+        
+          <li>
+            <a href="/18.html">Creative Coding - Practice 8</a>
+          </li>
+        
+          <li>
+            <a href="/17.html">Creative Coding - Practice 6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Aria<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

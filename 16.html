@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Creative Coding - Practice 5 | Aria&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ConceptThis exercise is based on the tutorial by “The Coding Train” on star field and explores the implementation of the concept called “wrape speed.” When I saw the artist’s work, I thought it would">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creative Coding - Practice 5">
+<meta property="og:url" content="https://ariaranya.github.io/16.html">
+<meta property="og:site_name" content="Aria&#39;s Blog">
+<meta property="og:description" content="ConceptThis exercise is based on the tutorial by “The Coding Train” on star field and explores the implementation of the concept called “wrape speed.” When I saw the artist’s work, I thought it would">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-16T01:09:09.000Z">
+<meta property="article:modified_time" content="2023-06-09T18:22:50.077Z">
+<meta property="article:author" content="Aria">
+<meta property="article:tag" content="Practice - rainning day">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Aria's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Aria&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">my works for Creative Coding</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ariaranya.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-16" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/16.html" class="article-date">
+  <time class="dt-published" datetime="2023-05-16T01:09:09.000Z" itemprop="datePublished">2023-05-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Creative Coding - Practice 5
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h2><p>This exercise is based on the tutorial by “The Coding Train” on star field and explores the implementation of the concept called “wrape speed.” When I saw the artist’s work, I thought it would be interesting to create a rainy day background using a similar effect. I believe it would be an intriguing experiment to use creative coding to achieve a specific visual presentation. If I were to add rain sound effects in the future, I believe it would enhance the emotional immersion of this exercise.</p>
+<iframe width="600" height="542" src="https://editor.p5js.org/ariaranya/full/jbKtAu_vG"></iframe>
+
+
+
+<h2 id="Code-and-Comments"><a href="#Code-and-Comments" class="headerlink" title="Code and Comments"></a>Code and Comments</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// defines a class named &quot;Rain&quot;</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Rain</span>&#123;</span><br><span class="line">  <span class="comment">// constructor function initializes the properties of the raindrop object  </span></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>)&#123;  </span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">x</span> = <span class="title function_">random</span>(<span class="number">0</span>, width);  <span class="comment">// x-coordinate of the raindrop&#x27;s position </span></span><br><span class="line">                                 <span class="comment">//random value between 0 and width of the canvas</span></span><br><span class="line">     </span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">y</span> = <span class="title function_">random</span>(<span class="number">0</span>,height);  <span class="comment">// y-coordinate of the raindrop&#x27;s position</span></span><br><span class="line">                                <span class="comment">// random value between 0 and height of the canvas</span></span><br><span class="line">    </span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">r</span> = <span class="title function_">random</span>(<span class="number">0</span>,<span class="number">350</span>) / <span class="number">100</span>; <span class="comment">// radius = divides random value from 0-350 by 100</span></span><br><span class="line">    </span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">z</span> = <span class="title function_">random</span>(<span class="number">0</span>, width);  <span class="comment">// the distance of the raindrop from the viewer (z) </span></span><br><span class="line">                                 <span class="comment">// random value between 0 and width of the canvas. </span></span><br><span class="line">    </span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">pz</span> = <span class="variable language_">this</span>.<span class="property">z</span>;  <span class="comment">// sets the previous value of &quot;z&quot; to the current value of &quot;z&quot;</span></span><br><span class="line">     </span><br><span class="line">     <span class="variable language_">this</span>.<span class="property">t</span> = <span class="title function_">random</span>(<span class="number">45</span>, <span class="number">100</span>);  <span class="comment">//transparency(t) of the raindrop </span></span><br><span class="line">                                <span class="comment">//random value between 45 and 100</span></span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// updating the raindrop&#x27;s position based on the speed variable</span></span><br><span class="line">  <span class="title function_">update</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">z</span> -= speed;  <span class="comment">// z = z-speed</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">z</span> &lt; <span class="number">1</span>)&#123;  <span class="comment">// if this.z less than 1, the following actions are performed</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">// this.x = random value within the range of:</span></span><br><span class="line">        <span class="comment">// negative width to positive width</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">x</span> = <span class="title function_">random</span>(-width, width); </span><br><span class="line">      </span><br><span class="line">        <span class="comment">// this.y = random value within the range of:</span></span><br><span class="line">        <span class="comment">// negative height to positive height</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">y</span> = <span class="title function_">random</span>(-height,height);</span><br><span class="line">      </span><br><span class="line">        <span class="comment">// this.r = random value between 0 and 250, divided by 100 </span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">r</span> = <span class="title function_">random</span>(<span class="number">0</span>,<span class="number">250</span>) / <span class="number">100</span>;</span><br><span class="line">      </span><br><span class="line">        <span class="comment">// this.z = random value within the range of 0 to the width of the canvas</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">z</span> = <span class="title function_">random</span>(<span class="number">0</span>, width);</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//updates the previous z value (pz) to the current z value</span></span><br><span class="line">        <span class="variable language_">this</span>.<span class="property">pz</span> = <span class="variable language_">this</span>.<span class="property">z</span>;</span><br><span class="line">        </span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">//  displaying the raindrop on the canvas</span></span><br><span class="line">  <span class="title function_">show</span>(<span class="params"></span>)&#123;</span><br><span class="line">     <span class="title function_">fill</span>(<span class="number">255</span>, <span class="variable language_">this</span>.<span class="property">t</span>);  <span class="comment">// fill colors for raindrop in white </span></span><br><span class="line">                         <span class="comment">//with this.transparency</span></span><br><span class="line">    </span><br><span class="line">     <span class="title function_">noStroke</span>();  <span class="comment">// no stroke, only have fill colors</span></span><br><span class="line">    </span><br><span class="line">     <span class="comment">// sx - scaled x-coordinate</span></span><br><span class="line">     <span class="comment">// maps this.x position divided by this.z value</span></span><br><span class="line">     <span class="comment">// from 0-1 and 0 to the width of the canvas</span></span><br><span class="line">     <span class="keyword">let</span> sx = <span class="title function_">map</span>(<span class="variable language_">this</span>.<span class="property">x</span> / <span class="variable language_">this</span>. z, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, width)</span><br><span class="line">     </span><br><span class="line">     <span class="comment">// sy - scaled y-coordinate</span></span><br><span class="line">     <span class="comment">// maps this.y position divided by this.z value</span></span><br><span class="line">     <span class="comment">// from 0-1 and 0 to the height of the canvas</span></span><br><span class="line">     <span class="keyword">let</span> sy = <span class="title function_">map</span>(<span class="variable language_">this</span>.<span class="property">y</span> / <span class="variable language_">this</span>. z, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, height)</span><br><span class="line">     </span><br><span class="line">     <span class="comment">// draws an ellipse on the canvas at the position</span></span><br><span class="line">     <span class="comment">// specified by sx and sy with this. r(radius) of the raindrop</span></span><br><span class="line">     <span class="title function_">ellipse</span>(sx, sy, <span class="variable language_">this</span>.<span class="property">r</span>, <span class="variable language_">this</span>.<span class="property">r</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// maps this.x position divided by its previous z value (pz)</span></span><br><span class="line">    <span class="comment">// from 0-1 and the range of 0 to the width of the canvas</span></span><br><span class="line">    <span class="keyword">let</span> px = <span class="title function_">map</span>(<span class="variable language_">this</span>. x / <span class="variable language_">this</span>.<span class="property">pz</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, width)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// maps this.y position divided by its previous z value (pz) </span></span><br><span class="line">    <span class="comment">// from 0-1 and the range of 0 to the height of the canvas</span></span><br><span class="line">    <span class="keyword">let</span> py = <span class="title function_">map</span>(<span class="variable language_">this</span>. y / <span class="variable language_">this</span>.<span class="property">pz</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>, height)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// updates the previous z value (pz) to the current z value</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">pz</span> = <span class="variable language_">this</span>.<span class="property">z</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// sets the stroke in white and with this.transparency</span></span><br><span class="line">    <span class="title function_">stroke</span>(<span class="number">255</span>, <span class="variable language_">this</span>.<span class="property">t</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// draws a line segment between the current position (sx, sy) and </span></span><br><span class="line">    <span class="comment">// the previous position (px, py)</span></span><br><span class="line">    <span class="title function_">line</span>(sx, sy, px, py);</span><br><span class="line">      </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> raindrop = []  <span class="comment">// declares an empty array called&quot; raindrop&quot;                     </span></span><br><span class="line"><span class="keyword">let</span> speed;  <span class="comment">//  declares a variable &quot;speed&quot; </span></span><br><span class="line"><span class="keyword">let</span> bg;     <span class="comment">// eclares a variable &quot;bg&quot;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;  <span class="comment">// runs once, at the start</span></span><br><span class="line">    <span class="title function_">createCanvas</span>(<span class="number">600</span>, <span class="number">500</span>);  <span class="comment">// create a canvas in 600px wide and 500px tall</span></span><br><span class="line">    bg = <span class="title function_">loadImage</span>(<span class="string">&#x27;1.jpg&#x27;</span>); <span class="comment">// loads an image file named &quot;1.jpg&quot;</span></span><br><span class="line">    <span class="title function_">background</span>(bg);  <span class="comment">//sets loaded image as background</span></span><br><span class="line">   </span><br><span class="line">    <span class="comment">// for loop</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">800</span>; i++)&#123;<span class="comment">// let i = 0; i less than 800; i = i+1</span></span><br><span class="line">      </span><br><span class="line">        raindrop[i] = <span class="keyword">new</span> <span class="title class_">Rain</span>();<span class="comment">//creates a new instance of the Rain class </span></span><br><span class="line">                                 <span class="comment">//assigns it to the i-th index of the raindrop array</span></span><br><span class="line">      &#125; </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">draw</span>(<span class="params"></span>) &#123;   <span class="comment">// loops, after setup has run</span></span><br><span class="line">   <span class="title function_">background</span>(bg);  <span class="comment">// set background by using &quot;bg&quot;- loaded image</span></span><br><span class="line">  </span><br><span class="line">   <span class="title function_">translate</span>(width / <span class="number">2</span>, height / <span class="number">2</span>); <span class="comment">//  translates to the（center of the canvas）</span></span><br><span class="line">  </span><br><span class="line">   <span class="comment">//  maps the current mouseX position to a value between 0 and 50</span></span><br><span class="line">   speed = <span class="title function_">map</span>(mouseX, <span class="number">0</span>, width, <span class="number">0</span>, <span class="number">50</span>); </span><br><span class="line">  </span><br><span class="line">   <span class="comment">// this loop iterates over each raindrop in the raindrop array</span></span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; raindrop. length; i++)&#123; <span class="comment">// i = 0, i less than raindrop. length</span></span><br><span class="line">                                               <span class="comment">// i = i+1</span></span><br><span class="line">       <span class="comment">// calls the update() method of the Rain instance at index &quot;i&quot;</span></span><br><span class="line">       raindrop[i].<span class="title function_">update</span>(); </span><br><span class="line">     </span><br><span class="line">       <span class="comment">//  calls the show() method of the Rain instance at index &quot;i&quot;</span></span><br><span class="line">       raindrop[i].<span class="title function_">show</span>();</span><br><span class="line">     </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Reference-Links"><a href="#Reference-Links" class="headerlink" title="Reference Links"></a>Reference Links</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=17WoOqgXsRM">The Coding Train</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ariaranya.github.io/16.html" data-id="cliowbhx7000anbovckjv5pwq" data-title="Creative Coding - Practice 5" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Practice-rainning-day/" rel="tag">Practice - rainning day</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/17.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Creative Coding - Practice 6
+        
+      </div>
+    </a>
+  
+  
+    <a href="/15.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Creative Coding - Practice 4</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT2/" rel="tag">AT2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT3/" rel="tag">AT3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assignments-1-p5-Sketch-Banner-Design/" rel="tag">Assignments 1 p5 Sketch - Banner Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice/" rel="tag">Practice -</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bouncing-balls/" rel="tag">Practice - Bouncing balls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bubble-2/" rel="tag">Practice - Bubble 2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Dots-pattern-with-background-colour-changes/" rel="tag">Practice - Dots pattern with background colour changes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Print-Pattern/" rel="tag">Practice - Print Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-bubbles/" rel="tag">Practice - bubbles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-flow-filed/" rel="tag">Practice - flow filed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-rainning-day/" rel="tag">Practice - rainning day</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AT2/" style="font-size: 10px;">AT2</a> <a href="/tags/AT3/" style="font-size: 10px;">AT3</a> <a href="/tags/Assignments-1-p5-Sketch-Banner-Design/" style="font-size: 10px;">Assignments 1 p5 Sketch - Banner Design</a> <a href="/tags/Practice/" style="font-size: 10px;">Practice -</a> <a href="/tags/Practice-Bouncing-balls/" style="font-size: 10px;">Practice - Bouncing balls</a> <a href="/tags/Practice-Bubble-2/" style="font-size: 10px;">Practice - Bubble 2</a> <a href="/tags/Practice-Dots-pattern-with-background-colour-changes/" style="font-size: 10px;">Practice - Dots pattern with background colour changes</a> <a href="/tags/Practice-Print-Pattern/" style="font-size: 10px;">Practice - Print Pattern</a> <a href="/tags/Practice-bubbles/" style="font-size: 10px;">Practice - bubbles</a> <a href="/tags/Practice-flow-filed/" style="font-size: 10px;">Practice - flow filed</a> <a href="/tags/Practice-rainning-day/" style="font-size: 10px;">Practice - rainning day</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/05.html">Creative Coding - AT3</a>
+          </li>
+        
+          <li>
+            <a href="/19.html">Creative Coding - AT2 April&#39;s loop</a>
+          </li>
+        
+          <li>
+            <a href="/18%20copy.html">Creative Coding - Practice 7</a>
+          </li>
+        
+          <li>
+            <a href="/18.html">Creative Coding - Practice 8</a>
+          </li>
+        
+          <li>
+            <a href="/17.html">Creative Coding - Practice 6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Aria<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

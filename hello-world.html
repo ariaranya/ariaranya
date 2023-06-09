@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Creative Coding - Practice 1 | Aria&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="ConceptThis exercise involves creating a polka dot pattern that changes the background color as the mouse moves. It uses the loop(). andmap(). concepts from the Coding Train tutorial. However, instead">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Creative Coding - Practice 1">
+<meta property="og:url" content="https://ariaranya.github.io/hello-world.html">
+<meta property="og:site_name" content="Aria&#39;s Blog">
+<meta property="og:description" content="ConceptThis exercise involves creating a polka dot pattern that changes the background color as the mouse moves. It uses the loop(). andmap(). concepts from the Coding Train tutorial. However, instead">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-09T18:22:50.077Z">
+<meta property="article:author" content="Aria">
+<meta property="article:tag" content="Practice - Dots pattern with background colour changes">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Aria's Blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Aria&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">my works for Creative Coding</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ariaranya.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hello-world.html" class="article-date">
+  <time class="dt-published" datetime="2023-03-17T16:00:00.000Z" itemprop="datePublished">2023-03-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Creative Coding - Practice 1
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h2><p>This exercise involves creating a polka dot pattern that changes the background color as the mouse moves. It uses the <code>loop()</code>. and<code>map()</code>. concepts from the Coding Train tutorial. However, instead of using random colors, I chose to create a gradient of two colors using <code>lerpColor()</code>. This adds an interactive element to the polka dot pattern and makes it more engaging.</p>
+<iframe width="600" height="642" src="https://editor.p5js.org/ariaranya/full/VZBMzrCzd"></iframe>
+
+
+
+
+<h2 id="Code-and-Comments"><a href="#Code-and-Comments" class="headerlink" title="Code and Comments"></a>Code and Comments</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// The variables of  r and b are set to specific RGB values</span></span><br><span class="line"><span class="keyword">let</span> g = <span class="number">226</span>;</span><br><span class="line"><span class="keyword">let</span> b = <span class="number">216</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// runs once, at the start</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="comment">// create canvas in 600 pixels wide and 600 pixels tall </span></span><br><span class="line">   <span class="title function_">createCanvas</span>(<span class="number">600</span>, <span class="number">600</span>);</span><br><span class="line"><span class="comment">// no outline</span></span><br><span class="line">   <span class="title function_">noStroke</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// loops, after setup has run </span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">draw</span>(<span class="params"></span>) &#123;</span><br><span class="line">  </span><br><span class="line"><span class="comment">// declares a variable &quot; bg&quot; </span></span><br><span class="line"><span class="comment">// &quot;bg&quot; equals the result of lerpColor function</span></span><br><span class="line"><span class="comment">// &quot;lerpColor() &quot;function is called to create a dynamic background color that changes based on the position of the mouse.</span></span><br><span class="line">   <span class="keyword">let</span> bg = <span class="title function_">lerpColor</span>(</span><br><span class="line">    </span><br><span class="line"><span class="comment">// set start color - white </span></span><br><span class="line">   <span class="title function_">color</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>), </span><br><span class="line">    </span><br><span class="line"><span class="comment">// set end color - lgiht green</span></span><br><span class="line">   <span class="title function_">color</span>(<span class="number">175</span>, <span class="number">222</span>, <span class="number">191</span>),</span><br><span class="line">     </span><br><span class="line"><span class="comment">// mouseX is the horizontal position of the mouse. the width variable represents the width of the canvas.</span></span><br><span class="line"><span class="comment">//mouseX dived width - the result means the &quot;position&quot; between the start and end colors.</span></span><br><span class="line">   mouseX / width);</span><br><span class="line"></span><br><span class="line"><span class="comment">// set background colour as &quot;bg&quot; value</span></span><br><span class="line">   <span class="title function_">background</span>(bg);</span><br><span class="line"></span><br><span class="line"><span class="comment">// nested &quot;for&quot; loop, starting at y coordinate 22 and ending at the height of the canvas, with a spacing of 55 pixels between each row.</span></span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">let</span> y = <span class="number">22</span>; y &lt; height; y += <span class="number">55</span>) &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">// nested &quot;for&quot; loop, tarting at x coordinate 22 and ending at the width of the canvas, with a spacing of 55 pixels between each column.    </span></span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">let</span> x = <span class="number">22</span>; x &lt; width; x += <span class="number">55</span>) &#123;</span><br><span class="line"></span><br><span class="line"><span class="comment">// fill colour into circles - yellow</span></span><br><span class="line">   <span class="title function_">fill</span>(<span class="number">225</span>, <span class="number">204</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// calling &quot;ellipse&quot; function to draw a circle at each x,y position specified by the loop variables x and y, with a radius of 20 pixels.   </span></span><br><span class="line">   <span class="title function_">ellipse</span>(x, y, <span class="number">20</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Reference-Links"><a href="#Reference-Links" class="headerlink" title="Reference Links"></a>Reference Links</h2><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=nicMAoW6u1g">The Coding Train - The map() Function - p5.js Tutorial</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=1c1_TMdf8b8&t=488s">The Coding Train - 4.2: Nested Loops - p5.js Tutorial</a></p>
+<p><a target="_blank" rel="noopener" href="https://thecodingtrain.com/tracks/code-programming-with-p5-js">The Coding Train - CODE! PROGRAMMING WITH P5.JS</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ariaranya.github.io/hello-world.html" data-id="cliowbhxg000pnbov5g0d3s0r" data-title="Creative Coding - Practice 1" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Practice-Dots-pattern-with-background-colour-changes/" rel="tag">Practice - Dots pattern with background colour changes</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/23.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Creative Coding - Practice 2
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT2/" rel="tag">AT2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AT3/" rel="tag">AT3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Assignments-1-p5-Sketch-Banner-Design/" rel="tag">Assignments 1 p5 Sketch - Banner Design</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice/" rel="tag">Practice -</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bouncing-balls/" rel="tag">Practice - Bouncing balls</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Bubble-2/" rel="tag">Practice - Bubble 2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Dots-pattern-with-background-colour-changes/" rel="tag">Practice - Dots pattern with background colour changes</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-Print-Pattern/" rel="tag">Practice - Print Pattern</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-bubbles/" rel="tag">Practice - bubbles</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-flow-filed/" rel="tag">Practice - flow filed</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Practice-rainning-day/" rel="tag">Practice - rainning day</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AT2/" style="font-size: 10px;">AT2</a> <a href="/tags/AT3/" style="font-size: 10px;">AT3</a> <a href="/tags/Assignments-1-p5-Sketch-Banner-Design/" style="font-size: 10px;">Assignments 1 p5 Sketch - Banner Design</a> <a href="/tags/Practice/" style="font-size: 10px;">Practice -</a> <a href="/tags/Practice-Bouncing-balls/" style="font-size: 10px;">Practice - Bouncing balls</a> <a href="/tags/Practice-Bubble-2/" style="font-size: 10px;">Practice - Bubble 2</a> <a href="/tags/Practice-Dots-pattern-with-background-colour-changes/" style="font-size: 10px;">Practice - Dots pattern with background colour changes</a> <a href="/tags/Practice-Print-Pattern/" style="font-size: 10px;">Practice - Print Pattern</a> <a href="/tags/Practice-bubbles/" style="font-size: 10px;">Practice - bubbles</a> <a href="/tags/Practice-flow-filed/" style="font-size: 10px;">Practice - flow filed</a> <a href="/tags/Practice-rainning-day/" style="font-size: 10px;">Practice - rainning day</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">May 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">March 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/05.html">Creative Coding - AT3</a>
+          </li>
+        
+          <li>
+            <a href="/19.html">Creative Coding - AT2 April&#39;s loop</a>
+          </li>
+        
+          <li>
+            <a href="/18%20copy.html">Creative Coding - Practice 7</a>
+          </li>
+        
+          <li>
+            <a href="/18.html">Creative Coding - Practice 8</a>
+          </li>
+        
+          <li>
+            <a href="/17.html">Creative Coding - Practice 6</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Aria<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
